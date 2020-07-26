@@ -1,0 +1,56 @@
+\documentclass[11pt, twoside]{article}	% Always compile at least twice.
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+ 
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+% Cover Information
+\def\univname{VNIT, Nagpur.}
+\def\coursenum{MAL-305}
+\def\coursename{Wavelet Analysis.}
+\def\professor{Dr. G. Naga Raju.}
+\def\student{Yogesh Phalak}
+\def\semesteryear{2019-2020}
+\def\imagename{VNIT.jpg}		    % Replace with University Seal
+\def\scalesize{0.50}					% Scale Logo Size 
+
+% Style Package (Load After Cover Information)
+\usepackage{mat999}	% Change to match style file
+
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+
+% Cover Page
+\coverpage
+
+% Last Updated
+\updated{\today}
+
+% Table of Contents
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+\pagestyle{fancy}
+\setcounter{section}{-1}
+\setcounter{page}{1}
+
+% Sections
+%\input{sections/introduction}
+\input{sections/section}
+
+% Bibliography
+\newpage
+\nocite{*}
+\printbibliography[heading=bibintoc]
+
+
+\end{document}
