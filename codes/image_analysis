@@ -1,0 +1,26 @@
+clc;
+img = imread('FPrint.png');M=double(img);
+% C=dct(M);
+% imgC=uint8(C);
+% C = compress(C,2000);
+% imgc=uint8(idct(C));
+
+H=dht3(M);
+H = compress(H,30);
+imgH=uint8(H);
+imgc=uint8(idht3(H));
+
+function out=compress(M,m)
+[I,J,K]=size(M);ctr=0;out=M;
+for k=1:K
+ for i=1:I
+    for j=1:J
+        if(abs(M(i,j,k))<m)
+            out(i,j,k)=0;
+            ctr=ctr+1;
+        end
+    end
+ end
+end
+(ctr)/(I*J*K)
+end
