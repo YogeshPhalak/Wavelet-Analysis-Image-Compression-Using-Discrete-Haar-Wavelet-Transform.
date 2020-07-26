@@ -1,6 +1,13 @@
 # Wavelet-Analysis-Image-Compression-Using-Discrete-Haar-Wavelet-Transform.
 
 
+![Compressed_Images_Comparision](/media/New%20Bitmap%20Image.png)
+
+![haar_gif](/media/Haar.gif)
+
+![Symlet gif](/media/Symlets.gif)
+
+
 
 **Function Descriptions 
 
