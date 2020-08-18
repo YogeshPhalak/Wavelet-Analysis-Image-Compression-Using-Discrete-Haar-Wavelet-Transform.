@@ -1,7 +1,7 @@
 # Wavelet-Analysis-Image-Compression-Using-Discrete-Haar-Wavelet-Transform.
 
 
-<img  src="/media/Symlets.gif" width="250" height="250"/>
+<img  src="/media/Symlets.gif" width="250" height="250" align='left'/>
 <img  src="/media/Haar.gif" width="250" height="250"/>
 
 
