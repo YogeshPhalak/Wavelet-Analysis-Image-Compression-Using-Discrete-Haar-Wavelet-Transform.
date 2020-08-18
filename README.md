@@ -1,11 +1,8 @@
 # Wavelet-Analysis-Image-Compression-Using-Discrete-Haar-Wavelet-Transform.
 
 
-![Compressed_Images_Comparision](/media/New%20Bitmap%20Image.png)
-
-![haar_gif](/media/Haar.gif)
-
-![Symlet gif](/media/Symlets.gif)
+<img  src="/media/Symlets.gif" width="250" height="250"/>
+<img  src="/media/Haar.gif" width="250" height="250"/>
 
 
 
@@ -320,128 +317,61 @@ As we can see, the information at the discontinuity in the original
 signal is sustained by the DHT method whereas, it is smoothed out in the
 case of DCT method.
 
-The Discrete Haar Transform in 2 Dimensions.
-============================================
+Image Compression Using Discrete Haar Wavelet Transform.
+========================================================
 
-In many applications, especially image processing, the objects being
-analyzed are best thought of as matrices, rather than one-dimensional
-finite signals. That is, we are interested in *L* × *M* matrices *c* of
-the form *c* = {*c*(*n*, *m*) : 0 ≤ *n* ≤ *L* − 1; 0 ≤ *m* ≤ *M* − 1}.
-The purpose of this section is to define a generalization of the DHT for
-matrices.
+As shown in the figure below, the Discrete Haar Wavelet Transform and
+The Discrete Cosine Transforms are taken. As most of the pixel values
+are near to the zero (i.e. black), image can be compressed by setting
+those values to zero.
 
-Given an even number *L* ∈ **N**, let *H* and *G* be the (*L*/2) × *L*
-matrices. Let *c* be an *M* × *L* matrix of the form
+<figure>
+<img src="/media/LionDCTDHT.PNG" id="fig:imgdctdht" alt="(a) Original Image, (b) DHT of the Image, (c) DCT of the Image." /><figcaption aria-hidden="true">(a) Original Image, (b) DHT of the Image, (c) DCT of the Image.</figcaption>
+</figure>
 
-![equation](http://latex.codecogs.com/gif.latex?c%3D%5Cleft%28%5Cbegin%7Barray%7D%7Bc%7D%7Bc_%7B0%7D%7D%20%5C%5C%20%7Bc_%7B1%7D%7D%20%5C%5C%20%7B%5Ccdots%7D%20%5C%5C%20%7Bc_%7BM-1%7D%7D%5Cend%7Barray%7D%5Cright%29%0A%0A)
+Hence, by applying lossy compression on the Discrete Cosine Transform of
+the image, The Inverse Discrete Cosine Transform of the compressed
+images are given by:
 
+<figure>
+<img src="/media/LionDCTcmp.PNG" id="fig:imgdct" alt="(a) 97% compressed using DCT, (b) 99% compressed using DCT, (c) 99.99% compressed using DCT." /><figcaption aria-hidden="true">(a) 97% compressed using DCT, (b) 99% compressed using DCT, (c) 99.99% compressed using DCT.</figcaption>
+</figure>
 
-In this notation, *c*<sub>ℓ</sub> is the ℓ th row of *c*. We define the
-row-wise approximation matrix of *c*, **H**<sup>row </sup>*c*, to be the
-*M* × (*L*/2) matrix defined by
+Similarly, applying lossy compression on the Discrete Haar Transform of
+the image, The Inverse Discrete Haar Transform of the compressed images
+are given by:
 
-![equation](http://latex.codecogs.com/gif.latex?%5Cmathbf%7BH%7D%5E%7B%5Ctext%20%7Brow%20%7D%7D%20c%3D%5Cleft%28%5Cbegin%7Barray%7D%7Bc%7D%7BH%20c_%7B0%7D%7D%20%5C%5C%20%7B%5Ctext%20%7B%20He%7D_%7B1%7D%7D%20%5C%5C%20%7B%5Ccdots%7D%20%5C%5C%20%7BH%20c_%7BM-1%7D%7D%5Cend%7Barray%7D%5Cright%29%0A%0A%0A)
+<figure>
+<img src="/media/LionDHTcmp.PNG" id="fig:imgdht" alt="(a) 97% compressed using DHT, (b) 99% compressed using DHT, (c) 99.99% compressed using DHT." /><figcaption aria-hidden="true">(a) 97% compressed using DHT, (b) 99% compressed using DHT, (c) 99.99% compressed using DHT.</figcaption>
+</figure>
 
+Conclusions.
+============
 
-We define the row-wise detail matrix of *c*, Grow *c*, \| to be the
-*M* × (*L*/2) matrix defined by:
+The normalized version of the Haar wavelet offers greater compression,
+and yields better-looking results compared to the standard one. This is
+due to the properties of orthogonal matrices. The variant that
+implements loops to perform the normalization in the Haar wavelet
+transformation process is better in terms of algorithm complexity
+compared to the variant that generates the required Haar matrices and
+performs matrix multiplication. Throughout this project, we focused on
+the Haar wavelet transform as a window to better understanding the
+different compression processes since they boil down to the same
+essence. Thus, this research and implementation have been useful in
+terms of gaining a lot of insight into the field of image compression
+and its application of mathematical concepts
 
-![equation](http://latex.codecogs.com/gif.latex?%5Cmathbf%7BG%7D%5E%7B%5Ctext%20%7Brow%20%7D%7D%20c%3D%5Cleft%28%5Cbegin%7Barray%7D%7Bc%7D%7BG%20c_%7B0%7D%7D%20%5C%5C%20%7BG%20c_%7B1%7D%7D%20%5C%5C%20%7B%5Ccdots%7D%20%5C%5C%20%7BG%20c_%7BM-1%7D%7D%5Cend%7Barray%7D%5Cright%29%0A%0A%0A%0A)
+REFERENCES
+==========
 
+1.  \] Walnut, David *F*. An introduction to wavelet analysis / David F.
+    Walnut p. cm. (Applied and numerical harmonic analysis) Includes
+    bibliographical references and index. ISBN 0 − 8176 − 3962 − 4 (alk.
+    paper).
 
-Given *L* ∈ **N** even, let *c* be an *L* × *M* matrix of the form
+2.  \] Stéphane Mallat, a Wavelet tour of signal processing,The Sparse
+    Way,ISBN 13 : 9780 − 12 − 374370 − 1.
 
-![equation](http://latex.codecogs.com/gif.latex?c%3D%5Cleft%28%5Cbegin%7Barray%7D%7Bcccc%7D%7Bc_%7B0%7D%7D%20%26%20%7Bc_%7B1%7D%7D%20%26%20%7B%5Ccdots%7D%20%26%20%7Bc_%7BM-1%7D%7D%5Cend%7Barray%7D%5Cright%29%0A%0A%0A%0A%0A)
+3.  \] A. Haar. Zur theorie der orthogonalen funktionensysteme. Math.
+    Annal., 69:331–371, 1910.
 
-
-where *c*<sub>ℓ</sub> is the ℓ<sup>*t**h*</sup> column of *c*. We define
-the column-wise approximation matrix of *c*, **H**<sup>col</sup>*c*, to
-be the (*L*/2) × *M* matrix defined by
-
-![equation](http://latex.codecogs.com/gif.latex?%5Cmathbf%7BH%7D%5E%7B%5Coperatorname%7Bcol%7D%7D%20c%3D%5Cleft%28%5Cbegin%7Barray%7D%7Bcccc%7D%7BH%20c_%7B0%7D%7D%20%26%20%7BH%20c_%7B1%7D%7D%20%26%20%7B%5Ccdots%7D%20%26%20%7BH%20c_%7BM-1%7D%7D%5Cend%7Barray%7D%5Cright%29%0A%0A%0A%0A%0A)
-
-
-We define the column-wise detail matrix of
-*c*, *G*<sup>*r**O**W*</sup>*c*, to be the (*L*/2) × *M* matrix defined
-by
-
-![equation](http://latex.codecogs.com/gif.latex?%5Cmathrm%7BG%7D%5E%7B%5Cmathrm%7Bcol%7D%7D%20c%3D%5Cleft%28%5Cbegin%7Barray%7D%7Bcccc%7D%7BG%20c_%7B0%7D%7D%20%26%20%7BG%20c_%7B1%7D%7D%20%26%20%7B%5Ccdots%7D%20%26%20%7BG%20c_%7BM-1%7D%7D%5Cend%7Barray%7D%5Cright%29%0A%0A%0A%0A%0A%0A)
-
-The DHT for the Matrices.
--------------------------
-
-Given J, *N* ∈ **N** with *J* &lt; *N* and a matrix
-*c*<sub>0</sub> = {*c*(*n*, *m*)}<sub>*n*, *m* = 0</sub><sup>*N* − 1</sup>
-For 1 ≤ *j* ≤ *J*, define the 2
-<sup>*N* − 3</sup> × 2<sup>*N* − *j*</sup> matrices
-*c*<sub>*j*</sub>*d*<sub>*j*</sub><sup>(1)</sup>, *d*<sub>*j*</sub><sup>(2)</sup>,
-and *d*<sub>*j*</sub><sup>(3)</sup> by
-
-
-![equation](http://latex.codecogs.com/gif.latex?%5Cbegin%7Baligned%7D%20c_%7Bj%7D%20%26%3D%5Cmathbf%7BH%7D%5E%7B%5Ctext%20%7Bcol%20%7D%7D%20%5Cmathbf%7BH%7D%5E%7B%5Ctext%20%7Brow%20%7D%7D%20c_%7Bj-1%7D%20%5C%5C%20d_%7Bj%7D%5E%7B%281%29%7D%20%26%3D%5Cmathbf%7BG%7D%5E%7B%5Ctext%20%7Bcol%20%7D%7D%20%5Cmathbf%7BH%7D%5E%7B%5Ctext%20%7Brow%20%7D%7D%20c_%7Bj-1%7D%20%5C%5C%20d_%7Bj%7D%5E%7B%282%29%7D%20%26%3D%5Cmathbf%7BH%7D%5E%7B%5Ctext%20%7Bcol%20%7D%7D%20%5Cmathbf%7BG%7D%5E%7B%5Ctext%20%7Brow%20%7D%7D%20c_%7Bj-1%7D%20%5C%5C%20d_%7Bj%7D%5E%7B%283%29%7D%20%26%3D%5Cmathbf%7BG%7D%5E%7B%5Ctext%20%7Bcol%20%7D%7D%20%5Cmathbf%7BG%7D%5E%7B%5Ctext%20%7Brow%20%7D%7D%20c_%7Bj-1%7D%20%5Cend%7Baligned%7D%0A%0A%0A%0A%0A%0A%0A)
-
-where
-**H**<sup>*c**o**l*</sup>, **G**<sup>*c**o**l*</sup>, **H**<sup>*r**o**w*</sup>,
-and **G**<sup>*r**o**w*</sup> are the
-2<sup>*N* − *j* − 2</sup> × 2<sup>*N* − *j* − 1</sup>. The *D**H**T* of
-*c*<sub>0</sub> is the collection of matrices
-
-The IDHT for the Matrices.
---------------------------
-
-Given *L* ∈ ℕ, let *H*<sup>\*</sup> alld *G*<sup>\*</sup> loc the
-adjoints of *H* and *G*. Let *c* be all *M* × (*L*/2) matrix of the
-form,
-
-![equation](http://latex.codecogs.com/gif.latex?c%3D%5Cleft%28%5Cbegin%7Barray%7D%7Bc%7D%7Bc_%7B1%7D%7D%20%5C%5C%20%7Bc_%7B1%7D%7D%20%5C%5C%20%7B%5Ccdots%7D%20%5C%5C%20%7Bc_%7BM-1%7D%7D%5Cend%7Barray%7D%5Cright%29%0A)
-
-We define the row-wise approximation adjoint of
-*r*.**H**<sup>*r**O**W*<sup>\*</sup></sup>*c*. to be the *M* × *L*
-Matrix.
-
-![equation](http://latex.codecogs.com/gif.latex?%5Cmathbf%7BH%7D%5E%7B%5Cmathrm%7Brow%7D%20%2A%7D%20c%3D%5Cleft%28%5Cbegin%7Barray%7D%7Bc%7D%7BH%5E%7B%2A%7D%20c_%7B0%7D%7D%20%5C%5C%20%7BH%5E%7B%2A%7D%20c_%7B1%7D%7D%20%5C%5C%20%7B%5Ccdots%7D%20%5C%5C%20%7BH%5E%7B%2A%7D%28n%20%2F-1%29%7D%5Cend%7Barray%7D%5Cright%29%0A)
-
-We define the row-wise detail adjoint of *C*.*G*<sup>*r**o**w*\*</sup>
-c. to be the *M* × *L* matrix
-
-![equation](http://latex.codecogs.com/gif.latex?%5Cmathrm%7BG%7D%5E%7B%5Cmathrm%7Brow%7D%5E%7B%2A%7D%7D%20c%3D%5Cleft%28%5Cbegin%7Barray%7D%7Bc%7D%7BG%5E%7B%2A%7D%20c_%7B0%7D%7D%20%5C%5C%20%7BG%5E%7B%2A%7D%20c_%7B1%7D%7D%20%5C%5C%20%7B%5Ccdots%7D%20%5C%5C%20%7BG%5E%7B%2A%7D%20c_%7BM-1%7D%7D%5Cend%7Barray%7D%5Cright%29%0A%0A%0A)
-
-*H*<sub>*r**o**w*</sub><sup>*c*</sup> is the matrix obtained by
-multiplying each row of *c* by the matrix *H*<sup>\*</sup>, and
-*G*<sup>*r**o**w*<sup>\*</sup></sup>*c* is the matrix obtained by
-multiplying each row of *c* by the matrix *G*<sup>\*</sup>. Given
-*L* ∈ ℕ even, let *c* be an (*L*/2) × *M* matrix of the form
-
-![equation](http://latex.codecogs.com/gif.latex?c%3D%5Cleft%28%5Cbegin%7Barray%7D%7Bcccc%7D%7Bc_%7B0%7D%7D%20%26%20%7Bc_%7B1%7D%7D%20%26%20%7B%5Ccdots%7D%20%26%20%7Bc_%7BM-1%7D%7D%5Cend%7Barray%7D%5Cright%29%0A%0A%0A%0A%0A)
-
-We define the column wise approximation adjoint of
-*c*.**H**<sup>*c**o**l*<sup>\*</sup></sup>*c*. to be this *L* × *M*
-matrix,
-
-![equation](http://latex.codecogs.com/gif.latex?%5Cmathbf%7BH%7D%5E%7B%5Cmathrm%7BCOl%7D%5E%7B%2A%7D%7D%20c%3D%5Cleft%28%5Cbegin%7Barray%7D%7Bcccc%7D%7BH%5E%7B%2A%7D%20c_%7B0%7D%7D%20%26%20%7BH%5E%7B%2A%7D%20c_%7B1%7D%7D%20%26%20%7B%5Ccdots%7D%20%26%20%7BH%5E%7B%2A%7D%20c_%7BM-1%7D%7D%5Cend%7Barray%7D%5Cright%29%0A%0A%0A%0A%0A%0A)
-
-We define the column-wise detail adjoint of *c*. Grow <sub>*C*</sub>. to
-be the *L* × *M* matrix
-
-![equation](http://latex.codecogs.com/gif.latex?%5Cmathbf%7BG%7D%5E%7B%5Cmathrm%7Bcol%7D%5E%7B%2A%7D%7D%20c%3D%5Cleft%28%5Cbegin%7Barray%7D%7Bcccc%7D%7BG%5E%7B%2A%7D%20c_%7B0%7D%7D%20%26%20%7BG%5E%7B%2A%7D%20c_%7B1%7D%7D%20%26%20%7B%5Ccdots%7D%20%26%20%7BG%5E%7B%2A%7D%20c_%7BM-1%7D%5E%7B%2A%7D%7D%5Cend%7Barray%7D%5Cright%29%0A%0A%0A%0A%0A%0A%0A%0A)
-
-The inverse *D**H**T* for matrices is given by
-
-![equation](http://latex.codecogs.com/gif.latex?%5Cbegin%7Baligned%7D%20c_%7B3-1%7D%3D%5Cmathbf%7BH%7D%5E%7B%5Cmathrm%7Brow%7D%5E%7B%2A%7D%7D%20%5Cmathbf%7BH%7D%5E%7B%5Cmathrm%7Bcol%7D%5E%7B%2A%7D%7D%20c_%7B3%7D%2B%5Cmathbf%7BH%7D%5E%7B%5Cmathrm%7Brow%7D%5E%7B%2A%7D%7D%20%5Cmathbf%7BG%7D%5E%7B%5Cmathrm%7Bcol%7D%5E%7B%2A%7D%7D%20d_%7Bj%7D%5E%7B%281%29%7D%20%5C%5C%20%26%2B%5Cmathbf%7BG%7D%5E%7B%5Cmathrm%7Brow%7D%5E%7B%2A%7D%7D%20%5Cmathbf%7BH%7D%5E%7B%5Cmathrm%7Bcol%7D%5E%7B%2A%7D%7D%20d_%7B3%7D%5E%7B%282%29%7D%2B%5Cmathbf%7BG%7D%5E%7B%5Cmathrm%7Brow%7D%5E%7B%2A%7D%7D%20%5Cmathbf%7BG%7D%5E%7B%5Cmathrm%7Bcol%7D%5E%7B%2A%7D%7D%20d_%7Bj%7D%5E%7B%283%29%7D%20%5Cend%7Baligned%7D%0A%0A%0A%0A%0A%0A%0A%0A%0A%0A)
-
-where
-**H**<sup>*c**o**l*</sup>, **G**<sup>*c**o**l*</sup>, **H**<sup>*r**o**w*</sup>,
-and **G**<sup>*r**o**w*</sup> are
-2<sup>*N* − 3 − 2</sup> × 2<sup>*N* − 3 − 1</sup> matrices given above.
-
-![equation](http://latex.codecogs.com/svg.latex?%5Cleft%5C%7Bd_%7Bj%7D%5E%7B%281%29%7D%2C%20d_%7Bj%7D%5E%7B%282%29%7D%2C%20d_%7Bj%7D%5E%7B%283%29%7D%5Cright%5C%7D_%7Bj%3D1%7D%5E%7BJ%7D%20%5Ccup%5Cleft%5C%7Bc_%7BJ%7D%5Cright%5C%7D%0A)
-
-
-
-
-
-
-
-
-
-![test](https://latex.codecogs.com/gif.latex?G_L%20%3D%20%5Cbegin%7Bmatrix%7D%201%20%26%200%20%26%200%5C%5C%200%20%26%201%20%26%200%20%5Cend%7Bmatrix%7D)
