@@ -1,8 +1,8 @@
 # Wavelet-Analysis-Image-Compression-Using-Discrete-Haar-Wavelet-Transform.
 
 
-<img  src="/media/Symlets.gif" width="250" height="250" align='left'/>
-<img  src="/media/Haar.gif" width="250" height="250"/>
+<img  src="/media/Symlets.gif" width="400" height="400" align='left'/>
+<img  src="/media/Haar.gif" width="400" height="400"/>
 
 
 
@@ -145,11 +145,7 @@ The Haar Scaling Functions and the Haar Functions.
 
 **Definition:** Let *p*(*x*) = *X*<sub>\[0.1)</sub>(*x*), and for each *j*.*k* ∈ **Z**, define *p*<sub>*j*.*k*</sub>(*x*) = 2<sup>*j*/2</sup>*p*(2<sup>*j*</sup>,*r*−*k*) = *D*<sub>2</sub>, *T*<sub>*k*</sub>*p*(*x*).
 
-The collection {*p*<sub>*j*, *k*</sub>(*x*)}<sub>t. *k* ∈ **Z**</sub> is
-referred to as the system of Haar scaling function. For each
-*j* ∈ **Z**. the collection {*p*<sub>1, *k*</sub>(*x*)}<sub>*k* ∈ **Z**</sub> is referred to as the system of scale *j* Haar scaling functions. Let
-*h*(*x*) = *χ*<sub>\[0, 1/2)</sub>(*x*) − *χ*<sub>\[1/2, 1\]</sub>(*x*),
-and for each *j*, *k* ∈ **Z**, define
+The collection {*p*<sub>*j*, *k*</sub>(*x*)}<sub>t. *k* ∈ **Z**</sub> is referred to as the system of Haar scaling function. For each *j* ∈ **Z**. the collection {*p*<sub>1, *k*</sub>(*x*)}<sub>*k* ∈ **Z**</sub> is referred to as the system of scale *j* Haar scaling functions. Let *h*(*x*) = *χ*<sub>\[0, 1/2)</sub>(*x*) − *χ*<sub>\[1/2, 1\]</sub>(*x*), and for each *j*, *k* ∈ **Z**, define
 
 *h*<sub>*j*, *k*</sub>(*x*) = 2<sup>*J*/2</sup>*h*(2<sup>*j*</sup>*x*−*k*) = *D*<sub>2<sup>*j*</sup></sub>*T*<sub>*k*</sub>*h*(*x*) The collection {*h*<sub>*j*, *k*</sub>(*x*)}<sub>*j*, *k* ∈ **Z**</sub> is referred to as the Haar system on **R**. For each *j* ∈ **Z**, the collection {*h*<sub>*J*, *k*</sub>(*x*)}<sub>*k* ∈ **Z**</sub> is
 referred to as the system of scale *j* Haar functions.
@@ -184,34 +180,25 @@ When *J* = 0, this collection will be referred to simply as the Haar system 
 Approximate and Detailed Operators.
 -----------------------------------
 
-**Definition:** For each *j* ∈ **Z**, define the approximation operator
-*P*<sub>*j*</sub> on functions *f*(*x*), *L*<sup>2</sup> on
-**R**, *b**y*
+**Definition:** For each *j* ∈ **Z**, define the approximation operator *P*<sub>*j*</sub> on functions *f*(*x*), *L*<sup>2</sup> on **R**, by
 
 ![equation](http://latex.codecogs.com/gif.latex?P_%7BJ%7D%20f%28x%29%3D%5Csum_%7Bk%7D%5Cleft%5Clangle%20f%2C%20p_%7BJ%2C%20k%7D%5Cright%5Crangle%20p_%7B%5Cjmath%2C%20k%7D%28x%29%0A)
 
-\(a\) For each *j* ∈ **Z**, define the approximation space
-*V*<sub>*j*</sub> by
+\(a\) For each *j* ∈ **Z**, define the approximation space *V*<sub>*j*</sub> by
 
 ![equation](http://latex.codecogs.com/gif.latex?V_%7Bj%7D%3D%5Coverline%7B%5Coperatorname%7Bspan%7D%7D%5Cleft%5C%7Bp_%7B%5Cjmath%2C%20k%7D%28x%29%5Cright%5C%7D_%7Bk%20%5Cin%20%5Cmathbf%7BZ%7D%7D%0A)
 
-since {*p*<sub>ȷ, *k*</sub>(*x*):*k*∈**Z**} is an orthonormal system on
-**R** ∈ **Z**. that *P*<sub>*j*</sub>*f*(*x*) is the function in
-*V*<sub>*j*</sub> best approximating *f*(*x*) in the *L*<sup>2</sup>
-sense.
+since {*p*<sub>ȷ, *k*</sub>(*x*):*k*∈**Z**} is an orthonormal system on **R** ∈ **Z**. that *P*<sub>*j*</sub>*f*(*x*) is the function in
+*V*<sub>*j*</sub> best approximating *f*(*x*) in the *L*<sup>2</sup> sense.
 
 \(b\) since
 *p*<sub>*j*, *k*</sub>(*x*) = 2<sup>*j*/2</sup>*χ*<sub>*I*<sub>*j*, *k*</sub></sub>(*x*)
 
 ![equation](http://latex.codecogs.com/gif.latex?%5Cqquad%5Cleft%28f%2C%20p_%7Bj%2C%20k%7D%5Cright%29%20p_%7Bj%2C%20k%7D%28x%29%3D%5Cleft%282%5E%7Bj%7D%20%5Cint_%7BI_%7Bj%2C%20k%7D%7D%20f%28t%29%20d%20t%5Cright%29%20%5Cchi_%7BI_%7Bj%2C%20k%7D%7D%28x%29%20%0A)
 
-In other words, on the interval
-*I*<sub>*j*, *k*</sub>, *P*<sub>*j*</sub>*f*(*x*) is the average value
-of *f*(*x*) on *I*<sub>*J*, *k*</sub>
+In other words, on the interval *I*<sub>*j*, *k*</sub>, *P*<sub>*j*</sub>*f*(*x*) is the average value of *f*(*x*) on *I*<sub>*J*, *k*</sub>
 
-**Definition:** For each *j* ∈ **Z**, define the detail operator
-*Q*<sub>*j*</sub> on functions *f*(*x*), *L*<sup>2</sup> on
-**R**, by
+**Definition:** For each *j* ∈ **Z**, define the detail operator *Q*<sub>*j*</sub> on functions *f*(*x*), *L*<sup>2</sup> on **R**, by
 
 ![equation](http://latex.codecogs.com/gif.latex?Q_%7Bj%7D%20f%28x%29%3DP_%7Bj%2B1%7D%20f%28x%29-P_%7Bj%7D%20f%28x%29%20%0A)
 
@@ -248,8 +235,7 @@ Thus. the Haar coefficients of *f*(*x*) can be approximated by the Haar coeffici
 Derivation.
 -----------
 
-Suppose that we are given a finite sequence of data of length 2<sup>*N*</sup> for some
-*N* ∈ **N**.{*c*<sub>0</sub>(*k*)}<sub>*k* = 0</sub><sup>2</sup> − 1. We assume that for some underlying function *f*(*x*) *c*<sub>0</sub>(*k*) = ⟨*f*⋅*p*<sub>*N*, *k*</sub>⟩. Fix *J* ∈ **N**.*J* &lt; *N*. and for each 1 ≤ *j* ≤ *J*, define,
+Suppose that we are given a finite sequence of data of length 2<sup>*N*</sup> for some *N* ∈ **N**.{*c*<sub>0</sub>(*k*)}<sub>*k* = 0</sub><sup>2</sup> − 1. We assume that for some underlying function *f*(*x*) *c*<sub>0</sub>(*k*) = ⟨*f*⋅*p*<sub>*N*, *k*</sub>⟩. Fix *J* ∈ **N**.*J* &lt; *N*. and for each 1 ≤ *j* ≤ *J*, define,
 
 *c*<sub>*j*</sub>(*k*) = ⟨*f*,*p*<sub>*N* − *j*, *k*</sub>⟩   and *d*<sub>*j*</sub>(*k*) = ⟨*f*.*h*<sub>*N* − *j*..⟩</sub>⟩
 
@@ -265,8 +251,7 @@ By writing in Matrix form,
 
 ![equation](http://latex.codecogs.com/gif.latex?%5Cleft%28%5Cbegin%7Barray%7D%7Bc%7D%7Bc_%7Bj-1%7D%282%20k%29%7D%20%5C%5C%20%7B%5Cleft%28%5Ccdot_%7Bj-1%7D%282%20k%2B1%29%5Cright.%7D%5Cend%7Barray%7D%5Cright%29%3D%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%5Cleft%28%5Cbegin%7Barray%7D%7Bcc%7D%7B1%7D%20%26%20%7B1%7D%20%5C%5C%20%7B1%7D%20%26%20%7B-1%7D%5Cend%7Barray%7D%5Cright%29%5Cleft%28%5Cbegin%7Barray%7D%7Bc%7D%7Bc_%7Bj%7D%28k%29%7D%20%5C%5C%20%7Bd_%7Bj%7D%28k%29%7D%5Cend%7Barray%7D%5Cright%29)
 
-As with the DFT, the DHT can be thought of as a linear transformation on a finite-dimensional space and as such can be written as multiplication by a matrix.
-Given *L* ∈ **N** even, define the (*L*/2) × *L* matrices *H*<sub>*L*</sub> and *G*<sub>*L*</sub> by:
+As with the DFT, the DHT can be thought of as a linear transformation on a finite-dimensional space and as such can be written as multiplication by a matrix. Given *L* ∈ **N** even, define the (*L*/2) × *L* matrices *H*<sub>*L*</sub> and *G*<sub>*L*</sub> by:
 
 ![equation](http://latex.codecogs.com/gif.latex?H_%7BL%7D%3D%5Cfrac%7B1%7D%7B%5Csqrt%7B2%7D%7D%5Cleft%28%5Cbegin%7Barray%7D%7Bcccccc%7D%7B1%7D%20%26%20%7B1%7D%20%26%20%7B0%7D%20%26%20%7B%7D%20%26%20%7B%5Ccdots%7D%20%26%20%7B0%7D%20%5C%5C%20%7B0%7D%20%26%20%7B0%7D%20%26%20%7B1%7D%20%26%20%7B1%7D%20%26%20%7B0%7D%20%26%20%7B%5Ccdots%7D%20%26%20%7B0%7D%20%5C%5C%20%7B%7D%20%26%20%7B%7D%20%26%20%7B%7D%20%26%20%7B%5Cvdots%7D%20%26%20%7B%7D%20%5C%5C%20%7B0%7D%20%26%20%7B%7D%20%26%20%7B%5Ccdots%7D%20%26%20%7B%7D%20%26%20%7B0%7D%20%26%20%7B1%7D%20%26%20%7B1%7D%5Cend%7Barray%7D%5Cright%29)
 
@@ -277,9 +262,7 @@ Define the *L* × *L* matrix 𝒲<sub>*L*</sub> by
 
 ![equation](http://latex.codecogs.com/gif.latex?%5Cmathcal%7BW%7D_%7BL%7D%3D%5Cleft%28%5Cbegin%7Barray%7D%7Bc%7D%7BH_%7BL%7D%7D%20%5C%5C%20%7BG_%7BL%7D%7D%5Cend%7Barray%7D%5Cright%29)
 
-The matrix *H*<sub>*L*</sub> is referred to as the approximation matrix,
-the matrix *G*<sub>*L*</sub> as the detail matrix, and the matrix
-𝒲<sub>*L*</sub> as the wavelet matrix.
+The matrix *H*<sub>*L*</sub> is referred to as the approximation matrix, the matrix *G*<sub>*L*</sub> as the detail matrix, and the matrix 𝒲<sub>*L*</sub> as the wavelet matrix.
 
 Algorithms for DHT and IDHT
 ---------------------------
@@ -290,8 +273,7 @@ and a vector
 ![equation](http://latex.codecogs.com/gif.latex?%5Cmathbf%7Bc%7D_%7B0%7D%3D%5Cleft%28c_%7B0%7D%280%29%20c_%7B0%7D%281%29%20%5Ccdots%20c_%7B0%7D%5Cleft%282%5E%7BN%7D-1%5Cright%29%5Cright%29)
 
 
-of length 2<sup>*N*</sup>, the *D**H**T* of **c**<sub>0</sub> is the
-vector
+of length 2<sup>*N*</sup>, the *D**H**T* of **c**<sub>0</sub> is the vector
 
 ![equation](http://latex.codecogs.com/gif.latex?%5Cleft%28%5Cbegin%7Barray%7D%7Bll%7D%7Bd_%7B1%7D%7D%20%26%20%7Bd_%7B2%7D%7D%5Cend%7Barray%7D%20%5Ccdots%20d_%7BJ%7D%20c_%7BJ%7D%5Cright%29%0A)
 
@@ -305,41 +287,30 @@ Tree Diagram for The DHT.
  Comparison of Discrete Haar Wavelet Transform with Discrete Cosine Transform.
 -----------------------------------------------------------------------------
 
-As shown in the figure,the lossy compression is performed on the given
-discrete signal by using discrete Haar transform (DHT) and by using
-discrete cosine transform (DCT).
+As shown in the figure,the lossy compression is performed on the given discrete signal by using discrete Haar transform (DHT) and by using discrete cosine transform (DCT).
 
 <figure>
 <img src="/media/dht.png" id="fig:dht_dct" alt="(a) Original Discrete Signal, (b) DHT of the Signal, (c) DCT of the Signal,(d) IDHT of Compressed Signal, (e) IDCT of Compressed Signal." /><figcaption aria-hidden="true">(a) Original Discrete Signal, (b) DHT of the Signal, (c) DCT of the Signal,(d) IDHT of Compressed Signal, (e) IDCT of Compressed Signal.</figcaption>
 </figure>
 
-As we can see, the information at the discontinuity in the original
-signal is sustained by the DHT method whereas, it is smoothed out in the
-case of DCT method.
+As we can see, the information at the discontinuity in the original signal is sustained by the DHT method whereas, it is smoothed out in the case of DCT method.
 
 Image Compression Using Discrete Haar Wavelet Transform.
 ========================================================
 
-As shown in the figure below, the Discrete Haar Wavelet Transform and
-The Discrete Cosine Transforms are taken. As most of the pixel values
-are near to the zero (i.e. black), image can be compressed by setting
-those values to zero.
+As shown in the figure below, the Discrete Haar Wavelet Transform and The Discrete Cosine Transforms are taken. As most of the pixel values are near to the zero (i.e. black), image can be compressed by setting those values to zero.
 
 <figure>
 <img src="/media/LionDCTDHT.PNG" id="fig:imgdctdht" alt="(a) Original Image, (b) DHT of the Image, (c) DCT of the Image." /><figcaption aria-hidden="true">(a) Original Image, (b) DHT of the Image, (c) DCT of the Image.</figcaption>
 </figure>
 
-Hence, by applying lossy compression on the Discrete Cosine Transform of
-the image, The Inverse Discrete Cosine Transform of the compressed
-images are given by:
+Hence, by applying lossy compression on the Discrete Cosine Transform of the image, The Inverse Discrete Cosine Transform of the compressed images are given by:
 
 <figure>
 <img src="/media/LionDCTcmp.PNG" id="fig:imgdct" alt="(a) 97% compressed using DCT, (b) 99% compressed using DCT, (c) 99.99% compressed using DCT." /><figcaption aria-hidden="true">(a) 97% compressed using DCT, (b) 99% compressed using DCT, (c) 99.99% compressed using DCT.</figcaption>
 </figure>
 
-Similarly, applying lossy compression on the Discrete Haar Transform of
-the image, The Inverse Discrete Haar Transform of the compressed images
-are given by:
+Similarly, applying lossy compression on the Discrete Haar Transform of the image, The Inverse Discrete Haar Transform of the compressed images are given by:
 
 <figure>
 <img src="/media/LionDHTcmp.PNG" id="fig:imgdht" alt="(a) 97% compressed using DHT, (b) 99% compressed using DHT, (c) 99.99% compressed using DHT." /><figcaption aria-hidden="true">(a) 97% compressed using DHT, (b) 99% compressed using DHT, (c) 99.99% compressed using DHT.</figcaption>
@@ -348,30 +319,14 @@ are given by:
 Conclusions.
 ============
 
-The normalized version of the Haar wavelet offers greater compression,
-and yields better-looking results compared to the standard one. This is
-due to the properties of orthogonal matrices. The variant that
-implements loops to perform the normalization in the Haar wavelet
-transformation process is better in terms of algorithm complexity
-compared to the variant that generates the required Haar matrices and
-performs matrix multiplication. Throughout this project, we focused on
-the Haar wavelet transform as a window to better understanding the
-different compression processes since they boil down to the same
-essence. Thus, this research and implementation have been useful in
-terms of gaining a lot of insight into the field of image compression
-and its application of mathematical concepts
+The normalized version of the Haar wavelet offers greater compression, and yields better-looking results compared to the standard one. This is due to the properties of orthogonal matrices. The variant that implements loops to perform the normalization in the Haar wavelet transformation process is better in terms of algorithm complexity compared to the variant that generates the required Haar matrices and performs matrix multiplication. Throughout this project, we focused on the Haar wavelet transform as a window to better understanding the different compression processes since they boil down to the same essence. Thus, this research and implementation have been useful in terms of gaining a lot of insight into the field of image compression and its application of mathematical concepts
 
 REFERENCES
 ==========
 
-1.  \] Walnut, David *F*. An introduction to wavelet analysis / David F.
-    Walnut p. cm. (Applied and numerical harmonic analysis) Includes
-    bibliographical references and index. ISBN 0 − 8176 − 3962 − 4 (alk.
-    paper).
+1.  \] Walnut, David *F*. An introduction to wavelet analysis / David F. Walnut p. cm. (Applied and numerical harmonic analysis) Includes bibliographical references and index. ISBN 0 − 8176 − 3962 − 4 (alk. paper).
 
-2.  \] Stéphane Mallat, a Wavelet tour of signal processing,The Sparse
-    Way,ISBN 13 : 9780 − 12 − 374370 − 1.
+2.  \] Stéphane Mallat, a Wavelet tour of signal processing,The Sparse Way,ISBN 13 : 9780 − 12 − 374370 − 1.
 
-3.  \] A. Haar. Zur theorie der orthogonalen funktionensysteme. Math.
-    Annal., 69:331–371, 1910.
+3.  \] A. Haar. Zur theorie der orthogonalen funktionensysteme. Math. Annal., 69:331–371, 1910.
 
